@@ -2,7 +2,15 @@
 
 {% block content %}
 <div class="row">
-    <table>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>News</th>
+                <th>Source</th>
+                <th>Published</th>
+                <th>Scraped</th>
+            </tr>
+        </thead>
         <tbody>
             {% for a in articles %}
             <tr>
@@ -11,17 +19,17 @@
                 </td>
                 <td>
                     <p>
-                        Source: {{ a.source }}
+                        {{ a.source }}
                     </p>
                 </td>
                 <td>
                     <p>
-                        Published: {{ a.published }}
+                        {{ a.published }}
                     </p>
                 </td>
                 <td>
                     <p>
-                        Scraped: {{ a.created_at }}
+                        {{ a.created_at }}
                     </p>
                 </td>
             </tr>
